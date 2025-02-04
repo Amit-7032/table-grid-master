@@ -1,0 +1,64 @@
+[
+    {
+      "name": "Employee",
+      "columns": [
+        { "column_id": "col1", "name": "ID", "column_data_type": "INT" },
+        { "column_id": "col2", "name": "Name", "column_data_type": "VARCHAR" }
+      ],
+      "children": [
+        {
+          "name": "SubEmployee",
+          "columns": [{ "column_id": "col3", "name": "SubID", "column_data_type": "INT" }],
+          "children": [
+            {
+              "name": "SubSubEmployee",
+              "columns": [
+                { "column_id": "col9", "name": "SubSubID", "column_data_type": "INT" }
+              ]
+            }
+          ]
+        },
+        { "name": "Salary", "columns": [{ "column_id": "col4", "name": "Amount", "column_data_type": "DECIMAL" }] }
+      ]
+    },
+    {
+      "name": "Department",
+      "columns": [
+        { "column_id": "col5", "name": "DeptID", "column_data_type": "INT" },
+        { "column_id": "col6", "name": "DeptName", "column_data_type": "VARCHAR" }
+      ],
+      "children": [
+        { "name": "HR", "columns": [{ "column_id": "col7", "name": "HRID", "column_data_type": "INT" }] },
+        { "name": "Finance", "columns": [{ "column_id": "col8", "name": "Budget", "column_data_type": "DECIMAL" }] }
+      ]
+    },
+    {
+      "name": "Projects",
+      "children": [
+        { "name": "Active", "columns": [{ "column_id": "col10", "name": "ProjectID", "column_data_type": "INT" }] },
+        { "name": "Completed", "columns": [{ "column_id": "col11", "name": "CompletionDate", "column_data_type": "DATE" }] }
+      ]
+    },
+    {
+      "name": "Attendance",
+      "children": [
+        { "name": "Monthly", "columns": [{ "column_id": "col12", "name": "Month", "column_data_type": "VARCHAR" }] },
+        { "name": "Yearly", "columns": [{ "column_id": "col13", "name": "Year", "column_data_type": "INT" }] }
+      ]
+    },
+    {
+      "name": "Finance",
+      "children": [
+        { "name": "Budget", "columns": [{ "column_id": "col14", "name": "TotalBudget", "column_data_type": "DECIMAL" }] },
+        { "name": "Expenses", "columns": [{ "column_id": "col15", "name": "ExpenseAmount", "column_data_type": "DECIMAL" }] }
+      ]
+    },
+    {
+      "name": "HR",
+      "children": [
+        { "name": "Recruitment", "columns": [{ "column_id": "col16", "name": "Position", "column_data_type": "VARCHAR" }] },
+        { "name": "Training", "columns": [{ "column_id": "col17", "name": "TrainingType", "column_data_type": "VARCHAR" }] }
+      ]
+    }
+  ]
+  

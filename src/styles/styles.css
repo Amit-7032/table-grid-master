@@ -1,0 +1,245 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .table-list {
+    width: 250px;
+    background: #fff;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .table-list h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .table-list-content {
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .tree-node {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  
+  .node-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .node-header:hover {
+    background-color: #e6f2ff;
+    border-radius: 3px;
+  }
+  
+  .toggle-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 5px;
+    color: #0078d4;
+    font-weight: bold;
+    width: 20px;
+    text-align: center;
+  }
+  
+  .node-children {
+    margin-left: 15px;
+    border-left: 1px solid #ccc;
+    padding-left: 10px;
+  }
+  
+  .table-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: grab;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: start;
+    color: #000;
+  }
+  
+  .grid-area {
+    flex: 1;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 15px;
+    position: relative;
+    width: 100%;
+    min-width: calc(100vw - 350px);
+  }
+  
+  .highlight {
+    background-color: #eef;
+  }
+  
+  /* Table Card */
+  .table-card {
+    background: white;
+    color: black;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    width: auto !important;
+    height: auto !important;
+    min-width: 220px;
+    max-width: 400px;
+  }
+  
+  .table-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+    gap: 8px;
+    position: relative;
+  }
+  
+  .table-icon {
+    font-size: 16px;
+  }
+  
+  .remove-btn {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background 0.3s ease, color 0.3s ease;
+    color: darkcyan;
+  }
+  
+  .remove-btn:hover {
+    background: #ddd;
+  }
+  
+  .table-card table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table-card th,
+  .table-card td {
+    padding: 6px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+  }
+  
+  .table-card th {
+    background: #e7f0fa;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .table-card-footer {
+    padding: 8px;
+    text-align: center;
+    background: #f1f1f1;
+    font-size: 12px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .react-resizable-handle {
+    width: 12px;
+    height: 12px;
+    background: transparent;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: se-resize;
+    border-radius: 2px;
+  }
+  
+  .react-resizable-handle::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="%23999" d="M16 16h4v2h-6v-6h2v4zm0-4h4v2h-6v-6h2v4zm0-4h4v2h-6V8h2zm4 12h-2v2h-2v-2h2v-2h2v2z"></path></svg>') no-repeat center center;
+    background-size: contain;
+  }
+  
+  /* Filter Container */
+  .filter-container {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .filter-input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: transparent;
+    color: #000;
+  }
+  
+  .filter-button {
+    background: #0078d4;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+  }
+  
+  .filter-button:hover {
+    background: #005a9e;
+  }
+  
+  .browse-workbooks {
+    background: #e6f2ff;
+    padding: 10px;
+    font-size: 14px;
+    color: #0078d4;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-top: auto;
+  }
+  
+  .browse-workbooks:hover {
+    background: #d0e7ff;
+  }
+  
