@@ -115,7 +115,7 @@ body {
   
   .table-card-header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     padding: 10px;
     background-color: #f4f4f4;
